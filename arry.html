@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" id="txtValue" />
+    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();" />
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();" />
+    <div id="result"></div> -->
+    <script>
+        // let x = 0;
+        // let array = Array();
+        // function add_element_to_array() {
+        // array[x] = document.getElementById("txtValue").value;
+        // alert("Element: " + array[x] + " Added at index " + x);
+        // x++;
+        // document.getElementById("txtValue ").value = "";
+        // }
+        // function display_array() {
+        // let e = "<hr/>";
+        // for (let i = 0; i < array.length; i++) {
+        // e += "Element " + i + " = " + array[i] + "<br/>";
+        // }
+        // document.getElementById("result").innerHTML = e;
+        // }
+
+        // let x = [-3, 5, 1, 3, 2, 10];
+        // let frist = 0;
+        // let last = x.length - 1;
+        // while (first < last) {
+        //     let b = x[first];
+        //     x[first] = x[last];
+        //     x[last] = b;
+        //     first++;
+        //     last--;
+        // }
+        // document.write(x);
+            
+        var arrayInt =[];
+        var tong = 0;
+        var tongChiSoLe =0;
+        
+        arrayInt[0]=parseInt(prompt("nhap so th 1"));
+        arrayInt[1]=parseInt(prompt("nhap so th 2"));
+        arrayInt[2]=parseInt(prompt("nhap so th 3"));
+        arrayInt[3]=parseInt(prompt("nhap so th 4"));
+        arrayInt[4]=parseInt(prompt("nhap so th 5"));
+         
+        
+        document.write("<p>mảng là"+  arrayInt+"</p>");
+
+       for (let i = 0; i < arrayInt.length; i++) {
+        if (arrayInt[i] % 2==0) {
+            document.write("<p>"+arrayInt[i]+"ở vị trí"+i+"là số chẳn</p>");
+        }
+       }
+       for (let i = 0; i < arrayInt.length; i++) {
+        if (arrayInt[i] % 2==0) {
+            document.write("<p>Tổng chỉ số chẳn là"+(tong+=arrayInt[i])+"</p>");
+        }
+       }
+
+
+
+       for (let y = 0; y < arrayInt.length; y++) {
+        if (y%2!=0) {
+            document.write("<p>"+arrayInt[y]+"ở vị trí"+y+"có chỉ số lẻ</p>");
+    
+        }
+        
+       }
+       for (let y = 0; y < arrayInt.length; y++) {
+        if (arrayInt[y] % 2==0) {
+            document.write("<p>Tổng chỉ số lẻ là"+(tongChiSoLe+=arrayInt[y])+"</p>");
+        }
+       }
+
+
+    
+
+       for (let e = 0; e < arrayInt.length; e++) {
+        if (arrayInt[e]<2) {
+        document.write(arrayInt[e] + "không là số nguyên tố <br/>");
+       } else if (arrayInt[e]==2) {
+        document.write(arrayInt[e] + " là số nguyên tố <br/>");
+       } else if (arrayInt[e]%2==0) {
+        document.write(arrayInt[e] + " không là số nguyên tố <br/>");
+       } else {
+        for (let z = 3; z < ((arrayInt[e].length)-1); z+2) {
+            if (arrayInt[e]%z==0) {
+            document.write(arrayInt[e] + " không là số nguyên tố <br/>");
+                break;  
+            }   
+        } 
+       }
+
+       }
+
+       let max = arrayInt[0];
+       for (let a = 0; a < arrayInt.length; a++) {
+        if (arrayInt[a]>max ){
+            max=arrayInt[a];     
+        } 
+       }
+       document.write("<p>max là"+max+"</p>");
+
+
+       var arrInt =[[]];
+       arrInt[0][0]=parseInt(prompt("nhap so"));
+       arrInt[0][1]=parseInt(prompt("nhap so"));
+       arrInt[0][2]=parseInt(prompt("nhap so"));
+       arrInt[0][3]=parseInt(prompt("nhap so"));
+       arrInt[1][0]=parseInt(prompt("nhap so"));
+       arrInt[1][1]=parseInt(prompt("nhap so"));
+       arrInt[1][2]=parseInt(prompt("nhap so"));
+       arrInt[1][3]=parseInt(prompt("nhap so"));
+
+
+
+        
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
